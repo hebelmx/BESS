@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta name="google-site-verification" content="rWmi4UEDDUgUwwEBWNFpZ73uEwUfPFQNiBqw2CCoraA" />
+    <meta name="google-adsense-account" content="ca-pub-6549351812537625">
+    
+    <script>
+
+      var sector = 'home';
+      var tag = '';
+
+      var url = window.location.href;
+
+      var splitPath = url.split("/");
+      var totSplitPath = splitPath.length;
+      var lastData = splitPath[splitPath.length-1];
+          lastData = lastData.split("?")[0];
+      var lastGAM = lastData.substring(0,40).replace(/[!@#$%^&*/()_-]/g, "");
+
+      if (lastData==""){
+        tag = "home";
+      }else{
+        if (lastData == "multimedia"){
+          tag = "multimedia";
+        }else if (lastData == "podcast" || splitPath[4] == "podcast"){
+          tag = "podcast";
+          if (totSplitPath>6){sector = 'detail';}
+        }else if (lastData == "videos" || splitPath[4] == "video"){
+          tag = "videos";
+          if (totSplitPath>6){sector = 'detail';}
+        }else if (lastData == "audio-articles"){
+          tag = "audio-article";
+        }else if (lastData == "search"){
+          tag = "search";
+        }else if (lastData == "expert-contributor"){
+          tag = "expert-contributor";
+        }else{
+          //Split Sector
+          lastDataCount = lastData.split("?s=");
+          if (lastDataCount.length>1){
+           var checkIfTag = lastDataCount[1].split("&idtag");
+           if (checkIfTag.length>1){
+                sector = checkIfTag[0];
+           }else{
+                sector = lastDataCount[1];
+           }
+            tag = lastDataCount[0];
+            splitSearchPage = sector.split("&page=");
+            if (splitSearchPage.length>1){
+              sector = splitSearchPage[0];
+              if (sector==""){
+                sector = lastDataCount[0];
+              }
+            }
+          }else{
+            //Split Tag
+            lastDataCount = lastData.split("?tag=");
+            if (lastDataCount.length>1 && splitPath.length>=3){
+              sector = splitPath[3];
+              tag = lastDataCount[1];
+            }else if (splitPath.length>=3){
+              sector = splitPath[3];
+              if (splitPath[3]=="expert-contributor"){
+                tag = splitPath[4];
+              }else{
+                if (splitPath[3]=='tag'){
+                lastDataTag = lastData.split("?idtag");
+                  tag=lastDataTag[0];
+                }else{
+                  tag = splitPath[3];
+                }
+              }
+            }else{
+              sector = lastData;
+              tag = lastData;
+            }
+          }
+        }
+      }
+
+      console.log (sector+"|"+tag+"|"+lastGAM);
+
+    </script>
+
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script>
+      window.googletag = window.googletag || {cmd: []};
+      window.addEventListener('DOMContentLoaded', function() {
+
+      googletag.cmd.push(function() {
+
+        googletag.pubads().enableAsyncRendering();
+
+        var REFRESH_KEY = 'refresh';
+        var REFRESH_VALUE = 'true';
+        var _rl_gen_sg=function(){let e="_rl_sg",t=[];try{let o=localStorage.getItem(e);"string"==typeof o&&(t=o.split(","))}catch(e){}if(0===t.length){let o=document.cookie.indexOf(e);if(-1!==o){o+=e.length+1;let n=document.cookie.indexOf(";",o);-1===n&&(n=document.cookie.length),t=document.cookie.substring(o,n).split(",")}}return t};
+
+        var map0 = googletag.sizeMapping()
+          .addSize([1024, 0], [[300, 250], [336, 280], [1, 1]])
+          .addSize([768, 0], [[300, 250], [336, 280], [1, 1]])
+          .addSize([320, 0], [[300, 250], [1, 1]])
+          .addSize([0, 0], [[300, 50], [1, 1]])
+          .build(); 
+
+        var map1 = googletag.sizeMapping()
+          .addSize([1024, 0], [[970, 90], [1, 1]])
+          .addSize([768, 0], [[300, 250], [1, 1]])
+          .addSize([320, 0], [[300, 250], [300, 100], [1, 1]])
+          .addSize([0, 0], [[300, 50], [1, 1]])
+          .build(); 
+
+        var map2 = googletag.sizeMapping()
+          .addSize([1024, 0], [[970, 90], [1, 1]])
+          .addSize([768, 0], [[970, 90], [1, 1]])
+          .addSize([320, 0], [[300, 250], [300, 100], [1, 1]])
+          .addSize([0, 0], [[350, 50], [1, 1]])
+          .build(); 
+
+        var map3 = googletag.sizeMapping()
+          .addSize([1024, 0], [[300, 250], [970, 90], [1, 1]])
+          .addSize([768, 0], [[300, 250], [1, 1]])
+          .addSize([320, 0], [[300, 250], [1, 1]])
+          .addSize([0, 0], [[300, 250], [1, 1]])
+          .build();
+
+        var map4 = googletag.sizeMapping()
+          .addSize([1024, 0], [[300, 250], [300, 600], [1, 1]])
+          .addSize([768, 0], [[300, 250], [300, 600], [1, 1]])
+          .addSize([320, 0], [[300, 250], [300, 600], [1, 1]])
+          .addSize([0, 0], [[300, 50], [1, 1]])
+          .build(); 
+
+        var map5 = googletag.sizeMapping()
+          .addSize([1024, 0], [[970, 90]])
+          .addSize([768, 0], [[970, 90]])
+          .addSize([320, 0], [[300, 250]])
+          .addSize([0, 0], [[300, 50]])
+          .build();
+
+        var map6 = googletag.sizeMapping()
+          .addSize([1024, 0], [[970, 90], [1, 1]])
+          .addSize([768, 0], [[970, 90], [1, 1]])
+          .addSize([320, 0], [[300, 250], [1, 1]])
+          .addSize([0, 0], [[300, 50], [1, 1]])
+          .build(); 
+
+
+          if (document.body.classList.contains('path-frontpage')){
+            //Homepage
+            googletag.defineSlot('/22809222576/MB_Homepage_pos0', [[300, 250], [970, 90]], 'div-gpt-ad-1724884205286-0').setTargeting(REFRESH_KEY, REFRESH_VALUE).setTargeting('refreshed_slot', 'false').defineSizeMapping(map6).setTargeting("_rl",_rl_gen_sg()).addService(googletag.pubads());
+            googletag.defineSlot('/22809222576/MB_Homepage_pos1', [[300, 250], [336, 280]], 'div-gpt-ad-1673970885290-0').setTargeting(REFRESH_KEY, REFRESH_VALUE).setTargeting('refreshed_slot', 'false').defineSizeMapping(map0).setTargeting("_rl",_rl_gen_sg()).addService(googletag.pubads());
+            googletag.defineSlot('/22809222576/MB_Homepage_pos2', [[300, 250], [336, 280]], 'div-gpt-ad-1673970958870-0').setTargeting(REFRESH_KEY, REFRESH_VALUE).setTargeting('refreshed_slot', 'false').defineSizeMapping(map0).setTargeting("_rl",_rl_gen_sg()).addService(googletag.pubads());
+            googletag.defineSlot('/22809222576/MB_Homepage_pos3', [[300, 250], [336, 280]], 'div-gpt-ad-1673971010352-0').setTargeting(REFRESH_KEY, REFRESH_VALUE).setTargeting('refreshed_slot', 'false').defineSizeMapping(map0).setTargeting("_rl",_rl_gen_sg()).addService(googletag.pubads());
+            googletag.defineSlot('/22809222576/MB_Homepage_pos4', [[300, 250], [336, 280]], 'div-gpt-ad-1673971044080-0').setTargeting(REFRESH_KEY, REFRESH_VALUE).setTargeting('refreshed_slot', 'false').defineSizeMapping(map0).setTargeting("_rl",_rl_gen_sg()).addService(googletag.pubads());
+            var adSlots = [
+              'div-gpt-ad-1724884205286-0',
+              'div-gpt-ad-1673970885290-0',
+              'div-gpt-ad-1673970958870-0',
+              'div-gpt-ad-1673971010352-0',
+              'div-gpt-ad-1673971044080-0'
+            ];
+          } else if (document.body.classList.contains('page-search') || document.body.classList.contains('page-type')){ 
+            //Search
+            googletag.defineSlot('/22809222576/MB_Search_300X250_pos1', [300, 250], 'div-gpt-ad-1669313947988-0').setTargeting(REFRESH_KEY, REFRESH_VALUE).setTargeting('refreshed_slot', 'false').setTargeting("_rl",_rl_gen_sg()).addService(googletag.pubads());
+            var adSlots = [
+              'div-gpt-ad-1669313947988-0'
+            ];            
+          } else if (document.body.classList.contains('page-multimedia')){
+            //Multimedia General
+            googletag.defineSlot('/22809222576/MB_Multimedia_Pos1', [[970, 90], [300, 250], [300, 200]], 'div-gpt-ad-1669313999180-0')
+              .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+              .setTargeting('refreshed_slot', 'false')
+              .defineSizeMapping(map1)
+              .setTargeting("_rl",_rl_gen_sg())
+              .addService(googletag.pubads());
+            googletag.defineSlot('/22809222576/MB_Multimedia_Pos2', [300, 250], 'div-gpt-ad-1669314027533-0').setTargeting(REFRESH_KEY, REFRESH_VALUE).setTargeting('refreshed_slot', 'false').setTargeting("_rl",_rl_gen_sg()).addService(googletag.pubads());
+            var adSlots = [
+              'div-gpt-ad-1669313999180-0',
+              'div-gpt-ad-1669314027533-0'
+            ];            
+          } else if (document.body.classList.contains('page-media')){
+            //Multimedia Detail
+            googletag.defineSlot('/22809222576/MB_Multimedia_detail_pos1', [[970, 90], [300, 250], [300, 200]], 'div-gpt-ad-1669314077354-0')
+              .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+              .setTargeting('refreshed_slot', 'false')
+              .defineSizeMapping(map2)
+              .setTargeting("_rl",_rl_gen_sg())
+              .addService(googletag.pubads());
+            googletag.defineSlot('/22809222576/MB_Multimedia_detail_pos2', [300, 600], 'div-gpt-ad-1673545894512-0')
+              .setTargeting("url", lastGAM)
+              .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+              .setTargeting('refreshed_slot', 'false')
+              .setCollapseEmptyDiv(true)
+              .setTargeting("_rl",_rl_gen_sg())
+              .addService(googletag.pubads());
+            var adSlots = [
+              'div-gpt-ad-1669314077354-0',
+              'div-gpt-ad-1673545894512-0'
+            ];
+          } else if (document.body.classList.contains('page-taxonomy')){
+            //Sector Tag
+            googletag.defineSlot('/22809222576/MB_Sector_Tag_Pos1', [[970, 90], [300, 250], [300, 200]], 'div-gpt-ad-1669314148653-0')
+              .setTargeting("pos", "1") 
+              .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+              .setTargeting("sector", sector)
+              .setTargeting("tag", tag)
+              .setTargeting('refreshed_slot', 'false')
+              .defineSizeMapping(map2)
+              .setTargeting("_rl",_rl_gen_sg())
+              .addService(googletag.pubads());
+            googletag.defineSlot('/22809222576/MB_Sector_Tag_Pos2_300x250', [300, 250], 'div-gpt-ad-1671036082131-0')
+              .setTargeting("pos", "2") 
+              .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+              .setTargeting("sector", sector)
+              .setTargeting("tag", tag)
+              .setTargeting('refreshed_slot', 'false')
+              .defineSizeMapping(map4)
+              .setTargeting("_rl",_rl_gen_sg())
+              .addService(googletag.pubads());
+            googletag.defineSlot('/22809222576/MB_Sector_Tag_Pos2', [300, 600], 'div-gpt-ad-1669314178789-0')
+              .setTargeting("pos", "2") 
+              .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+              .setTargeting("sector", sector)
+              .setTargeting("tag", tag)
+              .setTargeting('refreshed_slot', 'false')
+              .setTargeting("_rl",_rl_gen_sg())
+              .addService(googletag.pubads());
+            googletag.defineSlot('/22809222576/MB_Sector_Tag_Pos3', [300, 250], 'div-gpt-ad-1671035615011-0')
+              .setTargeting("pos", "3") 
+              .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+              .setTargeting("sector", sector)
+              .setTargeting("tag", tag)
+              .setTargeting('refreshed_slot', 'false')
+              .defineSizeMapping(map4)
+              .setTargeting("_rl",_rl_gen_sg())
+              .addService(googletag.pubads());
+            googletag.defineSlot('/22809222576/MB_Sector_Tag_Pos4', [300, 250], 'div-gpt-ad-1742328062360-0')
+              .setTargeting("pos", "4") 
+              .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+              .setTargeting("sector", sector)
+              .setTargeting("tag", tag)
+              .setTargeting('refreshed_slot', 'false')
+              .defineSizeMapping(map4)
+              .setTargeting("_rl",_rl_gen_sg())
+              .addService(googletag.pubads());
+            var adSlots = [
+              'div-gpt-ad-1669314148653-0',
+              'div-gpt-ad-1671036082131-0',
+              'div-gpt-ad-1669314178789-0',
+              'div-gpt-ad-1671035615011-0',
+              'div-gpt-ad-1742328062360-0'
+            ];
+          } else if (document.body.classList.contains('page-node')){
+            //Articles
+            googletag.defineSlot('/22809222576/MB_Articles_pos0', [[300, 250], [300, 600]], 'div-gpt-ad-1671474572130-0')
+              .setTargeting("pos", "0") 
+              .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+              .setTargeting("sector", sector)
+              .setTargeting("tag", tag)
+              .setTargeting("url", lastGAM)
+              .setTargeting('refreshed_slot', 'false')
+              .defineSizeMapping(map4)
+              .setTargeting("_rl",_rl_gen_sg())
+              .addService(googletag.pubads());
+            googletag.defineSlot('/22809222576/MB_Articles_pos1', [[970, 90], [300, 250]], 'div-gpt-ad-1752014862564-0')
+              .setTargeting("pos", "1") 
+              .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+              .setTargeting("sector", sector)
+              .setTargeting("tag", tag)
+              .setTargeting('refreshed_slot', 'false')
+              .defineSizeMapping(map5)
+              .setTargeting("_rl",_rl_gen_sg())
+              .addService(googletag.pubads());
+            googletag.defineSlot('/22809222576/MB_Articles_pos2', [300, 250], 'div-gpt-ad-1669314255100-0')
+              .setTargeting("pos", "2") 
+              .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+              .setTargeting("sector", sector)
+              .setTargeting("tag", tag)
+              .setTargeting('refreshed_slot', 'false')
+              .setTargeting("_rl",_rl_gen_sg())
+              .addService(googletag.pubads());
+            googletag.defineSlot('/22809222576/MB_Articles_pos3', [300, 250], 'div-gpt-ad-1669314285512-0')
+              .setTargeting("pos", "3") 
+              .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+              .setTargeting("sector", sector)
+              .setTargeting("tag", tag)
+              .setTargeting('refreshed_slot', 'false')
+              .setTargeting("_rl",_rl_gen_sg())
+              .addService(googletag.pubads());
+            googletag.defineSlot('/22809222576/MB_Articles_pos4', [728, 90], 'div-gpt-ad-1752015991116-0')
+              .setTargeting("pos", "4") 
+              .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+              .setTargeting("sector", sector)
+              .setTargeting("tag", tag)
+              .setTargeting('refreshed_slot', 'false')
+              .setTargeting("_rl",_rl_gen_sg())
+              .addService(googletag.pubads());
+            var adSlots = [
+              'div-gpt-ad-1671474572130-0',
+              'div-gpt-ad-1752014862564-0',
+              'div-gpt-ad-1669314255100-0',
+              'div-gpt-ad-1669314285512-0',
+              'div-gpt-ad-1752015991116-0'
+            ];
+          } else if (document.body.classList.contains('page-expert-contributor') || document.body.classList.contains('page-expert-contributor-author')){
+            //Expert
+            googletag.defineSlot('/22809222576/MB_Home_Expert_pos1', [[970, 90], [300, 250], [300, 200]], 'div-gpt-ad-1671059794992-0')
+              .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+              .setTargeting('refreshed_slot', 'false')
+              .defineSizeMapping(map2)
+              .setTargeting("_rl",_rl_gen_sg())
+              .addService(googletag.pubads());
+
+            googletag.defineSlot('/22809222576/MB_Expert_pos1', [300, 250], 'div-gpt-ad-1669314355585-0')
+              .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+              .setTargeting('refreshed_slot', 'false')
+              .defineSizeMapping(map4)
+              .setTargeting("_rl",_rl_gen_sg())
+              .addService(googletag.pubads());
+
+            googletag.defineSlot('/22809222576/MB_Expert_pos2', [300, 600], 'div-gpt-ad-1669314380460-0')
+              .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+              .setTargeting('refreshed_slot', 'false')
+              .setTargeting("_rl",_rl_gen_sg())
+              .addService(googletag.pubads());
+            var adSlots = [
+              'div-gpt-ad-1671059794992-0',
+              'div-gpt-ad-1669314355585-0',
+              'div-gpt-ad-1669314380460-0'
+            ];
+          }
+
+          var SECONDS_TO_WAIT_AFTER_VIEWABILITY = 15;
+
+          googletag.pubads().addEventListener('impressionViewable', function(event) {
+            var slot = event.slot;
+            if (slot.getTargeting(REFRESH_KEY).indexOf(REFRESH_VALUE) > -1) {
+              setTimeout(function() {
+                googletag.pubads().refresh([slot]);
+              }, SECONDS_TO_WAIT_AFTER_VIEWABILITY * 1000);
+            }
+          });
+
+          googletag.enableServices();
+
+          setTimeout(function() {
+            adSlots.forEach(function(slotId) {
+              if (document.getElementById(slotId)) {
+                googletag.display(slotId);
+              }
+            });
+          }, 100);
+        });
+      });
+    </script>
+
+    <meta http-equiv="refresh" content="3600">
+    <link rel="icon" type="image/png" sizes="32x32" href="/themes/mbi/images/MBN_Icon_Web-32px.png" />
+    <link rel="icon" type="image/png" sizes="152x152" href="/themes/mbi/images/MBN_Icon_Web-152px.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/themes/mbi/images/MBI_Icons_MBN192px.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="/themes/mbi/images/MBI_Icons_MBN192px.png" />
+
+    <meta charset="utf-8" />
+<link rel="canonical" href="https://mexicobusiness.news/energy/news/potential-battery-storage-mexicos-energy-transition" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="robots" content="index, follow" />
+<meta property="og:site_name" content="Mexico Business" />
+<meta property="og:type" content="News" />
+<meta name="description" content="BESS is emerging as a cornerstone of Mexico’s clean energy strategy, promising grid stability, cost savings, and long-term energy resilience." />
+<meta name="news_keywords" content="BESS, battery energy storage systems, Mexico, CFE, PIIRCE, Felipe Gallego Llano, IEA, Gerardo Pérez, EDF Renewables" />
+<meta name="twitter:description" content="BESS is emerging as a cornerstone of Mexico’s clean energy strategy, promising grid stability, cost savings, and long-term energy resilience." />
+<meta name="twitter:site" content="@MXBusinessNews" />
+<meta name="twitter:title" content="The Potential of Battery Storage in Mexico’s Energy Transition" />
+<meta property="og:url" content="https://mexicobusiness.news/energy/news/potential-battery-storage-mexicos-energy-transition" />
+<meta name="abstract" content="BESS is emerging as a cornerstone of Mexico’s clean energy strategy, promising grid stability, cost savings, and long-term energy resilience." />
+<meta name="keywords" content="BESS, battery energy storage systems, Mexico, CFE, PIIRCE, Felipe Gallego Llano, IEA, Gerardo Pérez, EDF Renewables" />
+<meta property="og:title" content="The Potential of Battery Storage in Mexico’s Energy Transition" />
+<meta name="twitter:url" content="https://mexicobusiness.news/energy/news/potential-battery-storage-mexicos-energy-transition" />
+<meta property="og:description" content="BESS is emerging as a cornerstone of Mexico’s clean energy strategy, promising grid stability, cost savings, and long-term energy resilience." />
+<meta name="twitter:image:alt" content="The Potential of Battery Storage in Mexico’s Energy Transition" />
+<meta name="twitter:image:width" content="1269" />
+<meta name="twitter:image:height" content="714" />
+<meta name="twitter:image" content="https://mexicobusiness.news/sites/default/files/styles/crop_16_9/public/2025-06/yellow-mignon-battery-2025-02-14-21-14-22-utc-2.jpg?h=37965308&amp;itok=ThLaL7HO" />
+<meta property="og:image" content="https://mexicobusiness.news/sites/default/files/styles/crop_16_9/public/2025-06/yellow-mignon-battery-2025-02-14-21-14-22-utc-2.jpg?h=37965308&amp;itok=ThLaL7HO" />
+<meta property="og:image:url" content="https://mexicobusiness.news/sites/default/files/styles/crop_16_9/public/2025-06/yellow-mignon-battery-2025-02-14-21-14-22-utc-2.jpg?h=37965308&amp;itok=ThLaL7HO" />
+<meta property="og:image:secure_url" content="https://mexicobusiness.news/sites/default/files/styles/crop_16_9/public/2025-06/yellow-mignon-battery-2025-02-14-21-14-22-utc-2.jpg?h=37965308&amp;itok=ThLaL7HO" />
+<meta property="og:image:width" content="1269" />
+<meta property="og:image:height" content="714" />
+<meta property="og:image:alt" content="The Potential of Battery Storage in Mexico’s Energy Transition" />
+<meta property="article:section" content="Energy" />
+<meta property="article:published_time" content="2025-06-23T16:57:32-0600" />
+<meta property="article:modified_time" content="2025-06-23T16:57:32-0600" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "name": "article",
+            "headline": "The Potential of Battery Storage in Mexico’s Energy Transition",
+            "description": "BESS is emerging as a cornerstone of Mexico’s clean energy strategy, promising grid stability, cost savings, and long-term energy resilience.",
+            "datePublished": "2025-06-23T16:57:32-0600",
+            "dateModified": "2025-06-23T16:57:32-0600"
+        }
+    ]
+}</script>
+<link rel="shortcut icon" href="/sites/default/files/MBN_Icon_Web-32px_0.png" type="image/png" />
+<link rel="revision" href="https://mexicobusiness.news/energy/news/potential-battery-storage-mexicos-energy-transition" />
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+
+        <title>The Potential of Battery Storage in Mexico’s Energy Transition</title>
+        <link rel="stylesheet" media="all" href="/sites/default/files/css/css_jhyMJkEkB-MqlBXiNQYGJ9lQKia4XsUbNqU8VHPOxOU.css?td55h4" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Dx1XuA9ToxCgxv6EC6N2pMXuqIUPjP1cALNQRa7N0tI.css?td55h4" />
+<link rel="stylesheet" media="all" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WWQWJG');</script>
+    <!-- End Google Tag Manager -->
+
+  </head>
+
+    <body class="page-energy page-news page-potential-battery-storage-mexicos-energy-transition page-node page-49254 page-node-author path-node page-node-type-article no-sidebars">
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WWQWJG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+          
+        <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div id="page">
+            <div id="header">
+                            <div class="header-first">
+                    <div class="container">
+                          <div>
+    <div class="views-element-container" id="block-hamburgermenu">
+  
+      <h2>Our Categories</h2>
+    
+      <div><div class="Test js-view-dom-id-24fee4809aca990b787dad47fff38c19fce9422f406357bea03c18a58afa0ce8">
+  
+  
+  
+
+  
+  
+  
+
+  <div class="menu-wrapper">
+  
+  <ul class="menu">
+
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/entrepreneurs"><div class="menu-header-container" data-color="9b7c0d" data-submenu="" data-submenu-id="">
+  Entrepreneurs
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/tech"><div class="menu-header-container" data-color="789a99" data-submenu="Digital Transformation, Artificial Intelligence, Internet of Things, Big Data &amp; Analytics, Data Centers, Blockchain, Network Solutions" data-submenu-id="1589, 945, 8755, 42076, 8356, 20, 32697">
+  Tech
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/talent"><div class="menu-header-container" data-color="251157" data-submenu="HRTech, EdTech, Recruitment, Talent Management, Compensation, Payroll &amp; Compliance, Employee Experience, Diversity, Equity &amp; Inclusion, Wellbeing" data-submenu-id="51081, 9727, 6174, 7200, 33300, 56490, 23565, 56543, 7767">
+  Talent
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/energy"><div class="menu-header-container" data-color="5d6c21" data-submenu="Natural Gas, Wind, Solar, Project Development, O &amp; M, Finance, Power Producers, Electricity Market, Offtakers, Energy Efficiency, ESR, Grid &amp; Pipelines" data-submenu-id="96, 97, 98, 157, 160, 153, 99, 156, 100, 103, 102, 158">
+  Energy
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/oilandgas"><div class="menu-header-container" data-color="24407b" data-submenu="Shallow water, Deepwater, Onshore, PEMEX, Operators, Exploration, Development, Production, Local content, EOR/IOR, Midstream, Downstream" data-submenu-id="2916, 69, 73, 33, 76, 71, 104, 75, 162, 163, 78, 77">
+  Oil &amp; Gas
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/mining"><div class="menu-header-container" data-color="6c737a" data-submenu="Gold, Silver, Base &amp; Battery metals, Exploration, Development, Operation, Processing, Technology, Automation, ESR, Finance &amp; Investment, Security" data-submenu-id="126, 127, 128, 71, 104, 129, 130, 70, 154, 102, 94, 155">
+  Mining
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/health"><div class="menu-header-container" data-color="52909d" data-submenu="Innovative medicine, Generics, Care Providers, Medical Devices, Medtech, Logistics &amp; Distribution, Supply Chain, Entrepreneurs, Medical Tourism, Finance" data-submenu-id="86, 87, 88, 89, 90, 91, 79, 131, 93, 153">
+  Health
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/automotive"><div class="menu-header-container" data-color="a30134" data-submenu="Sales Trends, Combustion Engine, Electrification, Material Technology, Connectivity &amp; Digitalization, Autonomous Vehicles, Industry 4.0, Supply Chain &amp; Logistics, Service &amp; Aftermarket" data-submenu-id="3305, 3306, 3307, 3308, 3309, 3310, 110, 3311, 3312">
+  Automotive
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/aerospace"><div class="menu-header-container" data-color="7b91c7" data-submenu="Aviation, Aircraft, Aeroengines, Direct Suppliers, Indirect Suppliers, Location &amp; Logistics, R&amp;D, MRO, UAV, Finance &amp; Investment" data-submenu-id="161, 114, 115, 107, 108, 111, 109, 117, 116, 94">
+  Aerospace
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/finance"><div class="menu-header-container" data-color="645570" data-submenu="Financial Inclusion, Fintech, Commercial Banking, Investment Banking, Foreign Exchange, Pension Funds, Venture Capital, Insurance, Professional Services" data-submenu-id="22, 137, 138, 139, 140, 141, 142, 143, 144">
+  Finance &amp; Fintech
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/infrastructure"><div class="menu-header-container" data-color="d07b2c" data-submenu="Real Estate, Architecture &amp; Design, Construction, Materials, Smart Cities, Water &amp; Waste, Industrial Parks, Transport Infrastructure, Finance &amp; Investment" data-submenu-id="118, 119, 120, 121, 122, 136, 124, 125, 94">
+  Infrastructure
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/sustainability"><div class="menu-header-container" data-color="94cb78" data-submenu="" data-submenu-id="">
+  Sustainability
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/professional-services"><div class="menu-header-container" data-color="a6a99a" data-submenu="Consulting, Legal services, Marketing &amp; Communication, Security, Health &amp; Safety, Facilities Management, Travel" data-submenu-id="4990, 2525, 14708, 155, 14709, 14710, 4628">
+  Professional Services
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/ecommerce"><div class="menu-header-container" data-color="0db14c" data-submenu="Omnichannel, Retail, Retail Tech, Ecommerce, Ecommerce Platforms, Customer Experience, Payments, Logistics &amp; Supply Chain, Data Analytics &amp; BI, Marketing, CRM" data-submenu-id="7287, 1535, 105616, 13193, 111945, 7289, 26269, 111946, 111947, 7141, 3247">
+  E-Commerce &amp; Retail
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/agribusiness"><div class="menu-header-container" data-color="005f47" data-submenu="Agriculture, GMO, Livestock, Forestry, Technology, Logistics &amp; Trade, Processed Food, Beverages, Finance &amp; Investment, Policy &amp; Regulation" data-submenu-id="145, 146, 147, 148, 70, 149, 150, 151, 94, 95">
+  Agribusiness &amp; Food
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/logistics"><div class="menu-header-container" data-color="bcb226" data-submenu="" data-submenu-id="">
+  Logistics
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/mobility"><div class="menu-header-container" data-color="c40076" data-submenu="" data-submenu-id="">
+  Mobility
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/trade-and-investment"><div class="menu-header-container" data-color="952062" data-submenu="" data-submenu-id="">
+  Trade &amp; Investment
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/policyandeconomy"><div class="menu-header-container" data-color="7c3620" data-submenu="" data-submenu-id="">
+  Policy &amp; Economy
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/cybersecurity"><div class="menu-header-container" data-color="789a99" data-submenu="Threat landscape, Cyberattacks &amp; Data Breaches, Cloud Security, Identity &amp; Access Management, SecOps, Data Privacy &amp; Compliance, Application Security, OT &amp; ICS Security" data-submenu-id="41147, 111950, 28986, 111951, 111952, 111953, 77330, 111954">
+  Cybersecurity
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/cloudanddata"><div class="menu-header-container" data-color="23a9d2" data-submenu="Gen AI, Data Management, LLM&#039;s &amp; Machine Learning, AI Ethics &amp; Regulation, Automation &amp; Productivity, Cloud Infrastructure &amp; Data Centers, Multi Cloud &amp; Hybrid Cloud" data-submenu-id="63371, 785, 111955, 111956, 111957, 111958, 111959">
+  AI, Cloud &amp; Data
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/chemicals"><div class="menu-header-container" data-color="4b8475" data-submenu="Petrochemicals, Specialty Chemicals, Agrochemicals, Chemical Logistics" data-submenu-id="12342, 40919, 58315, 110254">
+  Chemicals
+</div></a></span></div></li>
+    
+  </ul>
+
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+<div id="block-v2search">
+  
+    
+      
+            <div>  <img width="25" height="25" alt="Mexico Business News Lupa" src="/sites/default/files/2022-11/MBN_lupa.svg" />
+</div>
+      
+  </div>
+<nav role="navigation" aria-labelledby="block-multimedia-menu" id="block-multimedia">
+      
+  <h2 id="block-multimedia-menu">Multimedia</h2>
+  
+
+        
+              <ul>
+              <li>
+        <a href="/multimedia/podcast" title="Podcast List" data-drupal-link-system-path="multimedia/podcast">Podcast</a>
+              </li>
+          <li>
+        <a href="/multimedia/videos" title="Video List" data-drupal-link-system-path="multimedia/videos">Videos</a>
+              </li>
+          <li>
+        <a href="/multimedia/audio-articles" title="Audio Articles List" data-drupal-link-system-path="multimedia/audio-articles">Audio Articles</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-opinion-menu" id="block-opinion">
+      
+  <h2 id="block-opinion-menu">Opinion</h2>
+  
+
+        
+              <ul>
+              <li>
+        <a href="/expert-contributor" title="Expert Contributor List" data-drupal-link-system-path="expert-contributor">Expert Contributor</a>
+              </li>
+          <li>
+        <a href="/expert-contributor" title="Startup Contributor List" data-drupal-link-system-path="expert-contributor">Startup Contributor</a>
+              </li>
+          <li>
+        <a href="/tag/governor" title="Goverment List" data-drupal-link-system-path="taxonomy/term/3997">Goverment</a>
+              </li>
+          <li>
+        <a href="/tag/embassy" title="Embassy List" data-drupal-link-system-path="taxonomy/term/10125">Embassy</a>
+              </li>
+          <li>
+        <a href="/tag/chamber-commerce" title="Chamber of Commerce List" data-drupal-link-system-path="taxonomy/term/6711">Chamber of Commerce</a>
+              </li>
+          <li>
+        <a href="/tag/industry-association" title="Industry Association List" data-drupal-link-system-path="taxonomy/term/3468">Industry Association</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-type-menu" id="block-type">
+      
+  <h2 id="block-type-menu">Type</h2>
+  
+
+        
+              <ul>
+              <li>
+        <a href="/type/spotlight" title="Spotlight List" data-drupal-link-system-path="type/spotlight">Spotlight</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<div id="block-v2svgimagelogo">
+  
+    
+      
+            <div>  <img width="25" height="25" alt="Mexico Business News" src="/sites/default/files/2022-11/MexicoBusinessNews-Logo.svg" />
+</div>
+      
+  </div>
+
+  </div>
+
+                    </div>
+                </div>
+                    </div>
+                <div class="header-third sticky">
+              <div>
+    <div class="views-element-container" id="block-conferenceslist">
+  
+    
+      <div><div class="Test js-view-dom-id-02cb20675d3c50ebdad5ace4c82321e10f837884a3e7ac105f525f3984f2817b">
+  
+  
+  
+
+  
+  
+  
+
+  <div class="menu-wrapper">
+  
+  <ul class="menu">
+
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/entrepreneurs"><div class="menu-header-container" data-color="9b7c0d" data-submenu="" data-submenu-id="">
+  Entrepreneurs
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/tech"><div class="menu-header-container" data-color="789a99" data-submenu="Digital Transformation, Artificial Intelligence, Internet of Things, Big Data &amp; Analytics, Data Centers, Blockchain, Network Solutions" data-submenu-id="1589, 945, 8755, 42076, 8356, 20, 32697">
+  Tech
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/talent"><div class="menu-header-container" data-color="251157" data-submenu="HRTech, EdTech, Recruitment, Talent Management, Compensation, Payroll &amp; Compliance, Employee Experience, Diversity, Equity &amp; Inclusion, Wellbeing" data-submenu-id="51081, 9727, 6174, 7200, 33300, 56490, 23565, 56543, 7767">
+  Talent
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/energy"><div class="menu-header-container" data-color="5d6c21" data-submenu="Natural Gas, Wind, Solar, Project Development, O &amp; M, Finance, Power Producers, Electricity Market, Offtakers, Energy Efficiency, ESR, Grid &amp; Pipelines" data-submenu-id="96, 97, 98, 157, 160, 153, 99, 156, 100, 103, 102, 158">
+  Energy
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/oilandgas"><div class="menu-header-container" data-color="24407b" data-submenu="Shallow water, Deepwater, Onshore, PEMEX, Operators, Exploration, Development, Production, Local content, EOR/IOR, Midstream, Downstream" data-submenu-id="2916, 69, 73, 33, 76, 71, 104, 75, 162, 163, 78, 77">
+  Oil &amp; Gas
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/mining"><div class="menu-header-container" data-color="6c737a" data-submenu="Gold, Silver, Base &amp; Battery metals, Exploration, Development, Operation, Processing, Technology, Automation, ESR, Finance &amp; Investment, Security" data-submenu-id="126, 127, 128, 71, 104, 129, 130, 70, 154, 102, 94, 155">
+  Mining
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/health"><div class="menu-header-container" data-color="52909d" data-submenu="Innovative medicine, Generics, Care Providers, Medical Devices, Medtech, Logistics &amp; Distribution, Supply Chain, Entrepreneurs, Medical Tourism, Finance" data-submenu-id="86, 87, 88, 89, 90, 91, 79, 131, 93, 153">
+  Health
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/automotive"><div class="menu-header-container" data-color="a30134" data-submenu="Sales Trends, Combustion Engine, Electrification, Material Technology, Connectivity &amp; Digitalization, Autonomous Vehicles, Industry 4.0, Supply Chain &amp; Logistics, Service &amp; Aftermarket" data-submenu-id="3305, 3306, 3307, 3308, 3309, 3310, 110, 3311, 3312">
+  Automotive
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/aerospace"><div class="menu-header-container" data-color="7b91c7" data-submenu="Aviation, Aircraft, Aeroengines, Direct Suppliers, Indirect Suppliers, Location &amp; Logistics, R&amp;D, MRO, UAV, Finance &amp; Investment" data-submenu-id="161, 114, 115, 107, 108, 111, 109, 117, 116, 94">
+  Aerospace
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/finance"><div class="menu-header-container" data-color="645570" data-submenu="Financial Inclusion, Fintech, Commercial Banking, Investment Banking, Foreign Exchange, Pension Funds, Venture Capital, Insurance, Professional Services" data-submenu-id="22, 137, 138, 139, 140, 141, 142, 143, 144">
+  Finance &amp; Fintech
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/infrastructure"><div class="menu-header-container" data-color="d07b2c" data-submenu="Real Estate, Architecture &amp; Design, Construction, Materials, Smart Cities, Water &amp; Waste, Industrial Parks, Transport Infrastructure, Finance &amp; Investment" data-submenu-id="118, 119, 120, 121, 122, 136, 124, 125, 94">
+  Infrastructure
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/sustainability"><div class="menu-header-container" data-color="94cb78" data-submenu="" data-submenu-id="">
+  Sustainability
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/professional-services"><div class="menu-header-container" data-color="a6a99a" data-submenu="Consulting, Legal services, Marketing &amp; Communication, Security, Health &amp; Safety, Facilities Management, Travel" data-submenu-id="4990, 2525, 14708, 155, 14709, 14710, 4628">
+  Professional Services
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/ecommerce"><div class="menu-header-container" data-color="0db14c" data-submenu="Omnichannel, Retail, Retail Tech, Ecommerce, Ecommerce Platforms, Customer Experience, Payments, Logistics &amp; Supply Chain, Data Analytics &amp; BI, Marketing, CRM" data-submenu-id="7287, 1535, 105616, 13193, 111945, 7289, 26269, 111946, 111947, 7141, 3247">
+  E-Commerce &amp; Retail
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/agribusiness"><div class="menu-header-container" data-color="005f47" data-submenu="Agriculture, GMO, Livestock, Forestry, Technology, Logistics &amp; Trade, Processed Food, Beverages, Finance &amp; Investment, Policy &amp; Regulation" data-submenu-id="145, 146, 147, 148, 70, 149, 150, 151, 94, 95">
+  Agribusiness &amp; Food
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/logistics"><div class="menu-header-container" data-color="bcb226" data-submenu="" data-submenu-id="">
+  Logistics
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/mobility"><div class="menu-header-container" data-color="c40076" data-submenu="" data-submenu-id="">
+  Mobility
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/trade-and-investment"><div class="menu-header-container" data-color="952062" data-submenu="" data-submenu-id="">
+  Trade &amp; Investment
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/policyandeconomy"><div class="menu-header-container" data-color="7c3620" data-submenu="" data-submenu-id="">
+  Policy &amp; Economy
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/cybersecurity"><div class="menu-header-container" data-color="789a99" data-submenu="Threat landscape, Cyberattacks &amp; Data Breaches, Cloud Security, Identity &amp; Access Management, SecOps, Data Privacy &amp; Compliance, Application Security, OT &amp; ICS Security" data-submenu-id="41147, 111950, 28986, 111951, 111952, 111953, 77330, 111954">
+  Cybersecurity
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/cloudanddata"><div class="menu-header-container" data-color="23a9d2" data-submenu="Gen AI, Data Management, LLM&#039;s &amp; Machine Learning, AI Ethics &amp; Regulation, Automation &amp; Productivity, Cloud Infrastructure &amp; Data Centers, Multi Cloud &amp; Hybrid Cloud" data-submenu-id="63371, 785, 111955, 111956, 111957, 111958, 111959">
+  AI, Cloud &amp; Data
+</div></a></span></div></li>
+          <li class="item"><div class="views-field views-field-nothing"><span class="field-content"><a href="/chemicals"><div class="menu-header-container" data-color="4b8475" data-submenu="Petrochemicals, Specialty Chemicals, Agrochemicals, Chemical Logistics" data-submenu-id="12342, 40919, 58315, 110254">
+  Chemicals
+</div></a></span></div></li>
+    
+  </ul>
+
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+  </div>
+
+        </div>
+        <div id="main-content">
+        <div class="column-second">
+                        <div class="region-center">
+                                    <div class="column-left">
+                        <div class="content-top">
+                            
+                        </div>
+                        <div class="content-center">
+                              <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+
+
+
+<div class="article-container">
+	<div class="article-ad-1">
+		<!-- /22809222576/MB_Articles_pos1 -->
+		<div id='div-gpt-ad-1752014862564-0' style='min-width: 300px; min-height: 90px;'></div>
+	</div>
+			<header>
+	    	<div class="article-main-image-default">
+		  		<img src="/sites/default/files/2022-12/Energy-Envato-IMG-2022-%C2%A9-energy-industry-concept-1920x240-MBN.jpg" alt="The Potential of Battery Storage in Mexico’s Energy Transition">
+		  	</div>
+	    	<div class="article-type"> Home > Energy > Article</div>
+	    	<div class="article-title"><h1>The Potential of Battery Storage in Mexico’s Energy Transition</h1></div>
+	  	
+		    		  	  <div class="article-credit">Photo by: &nbsp;
+		  		  		  		  		  			  <span><a href="https://elements.envato.com/yellow-mignon-battery-PHHTW78" target="_blank">Ha4ipuri</a>,  </span>
+		  		  		  			  <span><a href="https://elements.envato.com" target="_blank">Envato</a> </span>
+		  		  		  	  </div>
+		    
+			<div class="article-social-networks">
+	  			<div class="shareit">Share it!</div>
+				<span class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://mexicobusiness.news/energy/news/potential-battery-storage-mexicos-energy-transition" data-a2a-title="The Potential of Battery Storage in Mexico’s Energy Transition"><a class="a2a_button_linkedin"></a><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_dd addtoany_share" href="https://www.addtoany.com/share#url=https%3A%2F%2Fmexicobusiness.news%2Fenergy%2Fnews%2Fpotential-battery-storage-mexicos-energy-transition&amp;title=The%20Potential%20of%20Battery%20Storage%20in%20Mexico%E2%80%99s%20Energy%20Transition"></a></span>
+			</div>
+		</header>
+  		
+	<div class="article-left">
+
+	   <div class="article-left-data">
+  
+  
+    <div class="article-contact-info-f1">
+              <img src="/sites/default/files/pictures/2025-05/Mexico-Business-img-2025-Valeria-Diaz-0061-apd-lo-2-2.jpg" alt="Andrea Valeria Díaz Tolivia">
+       
+              By Andrea Valeria Díaz Tolivia | Journalist &amp; Industry Analyst - 
+       
+      Mon, 06/23/2025 - 16:57 
+    </div> 
+
+    
+    
+      <div class="video">
+       
+    </div>
+  
+  
+  
+  <div class="description">
+  
+            <div property="schema:text"><p dir="ltr">Battery Energy Storage Systems (BESS) have gained momentum in Mexico, with both the federal government and private companies ramping up plans to install several gigawatts of capacity over the coming years. These systems allow for electricity, whether surplus or not, to be stored and released during peak demand or grid disruptions, helping to stabilize the power supply.</p>
+
+<p dir="ltr">BESS offers three major benefits for both users and the grid. First, they enhance grid resilience by storing electricity that can be used during blackouts or when curtailment occurs. Second, they reduce electricity costs, allowing power generated during off-peak hours to be used when prices are higher, like at night. Third, BESS can improve energy access in remote areas through microgrid systems that operate independently from the national grid. Additionally, they are particularly attractive for renewable energy projects with intermittent power, such as solar. With BESS, solar farms are able to store surplus energy during the day that can be distributed during nighttime when production stops.  </p>
+
+<p dir="ltr">As part of Mexico’s broader energy strategy, the federal government is backing significant BESS investments. According to the Strengthening and Expansion Plan for the National Electric System released earlier this year, CFE aims to deploy 2,216MW of battery storage by 2030, an investment estimated at around US$2.3 billion. The same plan outlines six photovoltaic plants set to begin operations between 2027 and 2028, all of which will include BESS to cover roughly 30–35% of their output, amounting to 574MW of storage capacity. According to Jorge Islas, Deputy Minister of Energy Planning and Transition, all new intermittent renewable energy plants will require 30% of their capacity in batteries, with the batteries capable of storing at least three hours of output. Looking further ahead, the government’s Indicative Program for the Installation and Retirement of Power Plants (PIIRCE) includes plans for 8.4GW of BESS installations between 2024 and 2038.</p>
+
+<p dir="ltr">In recent years, BESS has shifted from a niche solution to a critical component of Mexico’s energy strategy. Enrique Garduño, CEO, Skysense, a company specializing in BESS, believes that since 2023, the technology has reached an inflection point, not only becoming more financially attractive and bankable, but also benefiting from regulatory improvements.</p>
+
+<p dir="ltr">“The energy storage sector to me is an emerging sector,” said Garduño. “But over the past three years we have started to see an inflection point where exponential growth is going to happen. The opportunity is massive, considering you have a grid stressed in terms of supply and demand.”</p>
+
+<p dir="ltr">Still, experts caution that batteries alone will not solve Mexico’s energy challenges. Gerardo Pérez, Legal Representative at EDF Renewables, argues that energy storage must be paired with significant investment in transmission, distribution, and new generation.</p>
+
+<p dir="ltr">“Energy storage technologies, such as BESS, play an important role in strengthening the grid, but they are not a standalone solution,” said Perez. “The underlying issue is that Mexico’s electrical infrastructure, particularly the national transmission and distribution networks, requires significant reinforcement. These networks currently represent the main bottleneck.”</p>
+
+<p dir="ltr">As Mexico accelerates its solar buildout, pairing it with battery storage from the outset will be key to maximizing long-term value and reliability. Felipe Gallego Llano, COO and Co-Founder, MegaFlux, points to the experiences of Texas as a cautionary tale, where grid instability and inadequate storage limited the benefits of renewable energy. He references the 2021 Texas power crisis, where extreme weather and dependence on natural gas exposed the need for greater resilience, something well-planned BESS can provide. Llano emphasizes that Mexico, with the right regulatory and logistical planning, is in a strong position to stay ahead of these risks.</p>
+
+<p dir="ltr">“Battery storage is not just a technical necessity, it is a strategic opportunity to build a more independent, efficient, and sustainable energy future that supports economic growth while meeting climate commitments,” said Llano. </p>
+
+<p dir="ltr">The rollout of BESS has gained strong momentum globally. According to the IEA, installed BESS capacity reached 272GW in 2023. That number could rise to 1,016GW by 2030 if current energy transition policies hold, and up to 1,503GW if the world stays on track for the net-zero-by-2050 scenario. </p>
+
+<p dir="ltr">Benchmark Mineral Intelligence data shows China currently leads with 215.5GWh of installed capacity, followed by the United States with 82.1GWh, while most other countries remain in the single digits. But the landscape is set to change quickly. By 2027, the Top 20 countries are projected to grow their combined capacity by 289%. China and the United States are expected to hit 721.2GWh and 244.6GWh, respectively, followed by Australia (102.9GWh), the United Kingdom (56.3GWh), and Chile (41GWh). Canada is set to experience the fastest growth, surging from just 0.3GWh to 18.3GWh, a staggering 6,000% increase.</p>
+
+<p><br />
+ </p></div>
+      
+  </div>
+
+    
+      <div class="article-credit-down">Photo by: &nbsp;
+                    <span><a href="https://elements.envato.com/yellow-mignon-battery-PHHTW78" target="_blank">Ha4ipuri</a>,  </span>
+              <span><a href="https://elements.envato.com" target="_blank">Envato</a> </span>
+          </div>
+  
+  <div class="tags">
+  	<span>Tags:</span> 
+	<ul>
+
+ 			<li>
+	  		<a href="/tag/bess?s=energy">BESS</a>
+		</li>
+  		<li>
+	  		<a href="/tag/battery-energy-storage-systems?s=energy">battery energy storage systems</a>
+		</li>
+  		<li>
+	  		<a href="/tag/mexico?s=energy">Mexico</a>
+		</li>
+  		<li>
+	  		<a href="/tag/cfe?s=energy">CFE</a>
+		</li>
+  		<li>
+	  		<a href="/tag/piirce?s=energy">PIIRCE</a>
+		</li>
+  		<li>
+	  		<a href="/tag/felipe-gallego-llano?s=energy">Felipe Gallego Llano</a>
+		</li>
+  		<li>
+	  		<a href="/tag/iea?s=energy">IEA</a>
+		</li>
+  		<li>
+	  		<a href="/tag/gerardo-perez?s=energy">Gerardo Pérez</a>
+		</li>
+  		<li>
+	  		<a href="/tag/edf-renewables?s=energy">EDF Renewables</a>
+		</li>
+  
+	</ul>
+  </div> 
+
+  <div class="article-ad-4">
+    <!-- /22809222576/MB_Articles_pos4 -->
+    <div id='div-gpt-ad-1752015991116-0' style='min-width: 728px; min-height: 90px;'>
+    </div>
+  </div>
+
+  <div class="article-rel">
+  	<h2>You May <span>Like</span></h2>
+            	<div class="views-element-container"><div class="js-view-dom-id-4e3b8a0f40754e38e8797d927a6814380489cbc803a97413bc1ada6ac2f0ae26">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="rel">
+  <a target="_blank" href="https://mexicobusiness.news/trade-and-investment/news/nuevo-leons-globalization-strategy-gains-recognition"><img src="/sites/default/files/styles/media_square/public/2026-03/pexels-ondivade-29703040.jpg?h=9103dced&amp;itok=JtnJ5gTk" alt="Nuevo Leon’s Globalization Strategy Gains Recognition"></a>
+  <div class="rel-tit"><a href="https://mexicobusiness.news/trade-and-investment/news/nuevo-leons-globalization-strategy-gains-recognition">Nuevo Leon’s Globalization Strategy Gains Recognition</a></div>
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="rel">
+  <a target="_blank" href="https://mexicobusiness.news/energy/news/energy-infrastructure-behind-ai-economy"><img src="/sites/default/files/styles/media_square/public/pictures/2025-06/Solar180-img-2025-Marcos-Ripoll-Vidal-MBN.jpg?h=ae65b3be&amp;itok=7rV2CCaM" alt="The Energy Infrastructure Behind the AI Economy"></a>
+  <div class="rel-tit"><a href="https://mexicobusiness.news/energy/news/energy-infrastructure-behind-ai-economy">The Energy Infrastructure Behind the AI Economy</a></div>
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="rel">
+  <a target="_blank" href="https://mexicobusiness.news/energy/news/atlas-renewable-closes-us3-billion-refinancing-deal"><img src="/sites/default/files/styles/media_square/public/2026-03/pexels-rickyrecap-3877662.jpg?h=9103dced&amp;itok=YxqTOqeE" alt="Atlas Renewable Closes US$3 Billion Refinancing Deal"></a>
+  <div class="rel-tit"><a href="https://mexicobusiness.news/energy/news/atlas-renewable-closes-us3-billion-refinancing-deal">Atlas Renewable Closes US$3 Billion Refinancing Deal</a></div>
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="rel">
+  <a target="_blank" href="https://mexicobusiness.news/energy/news/opportunities-behind-meter-clean-energy-dg-and-storage"><img src="/sites/default/files/styles/media_square/public/2026-02/Von-Wobeser-y-Sierra-img-2021-Edmond-Grieger-01-MBN.jpg?h=f139c852&amp;itok=AGKB61-X" alt="Opportunities in Behind-the-Meter Clean Energy, DG, and Storage"></a>
+  <div class="rel-tit"><a href="https://mexicobusiness.news/energy/news/opportunities-behind-meter-clean-energy-dg-and-storage">Opportunities in Behind-the-Meter Clean Energy, DG, and Storage</a></div>
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="rel">
+  <a target="_blank" href="https://mexicobusiness.news/trade-and-investment/news/energy-autonomy-drives-development-new-industrial-parks"><img src="/sites/default/files/styles/media_square/public/2026-01/pexels-prosopo-2154802359-33596415.jpg?h=bcd0ad19&amp;itok=Wsz6Uh0L" alt="Energy Autonomy Drives Development of New Industrial Parks"></a>
+  <div class="rel-tit"><a href="https://mexicobusiness.news/trade-and-investment/news/energy-autonomy-drives-development-new-industrial-parks">Energy Autonomy Drives Development of New Industrial Parks</a></div>
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="rel">
+  <a target="_blank" href="https://mexicobusiness.news/energy/news/2026-final-4-year-sprint-toward-mexicos-energy-commitment"><img src="/sites/default/files/styles/media_square/public/pictures/2025-04/Solfium-img-2025-Andres-Friedman-MBN.jpg?h=9a102184&amp;itok=w7rA8mU9" alt="2026: The Final 4-Year Sprint Toward Mexico&#039;s Energy Commitment"></a>
+  <div class="rel-tit"><a href="https://mexicobusiness.news/energy/news/2026-final-4-year-sprint-toward-mexicos-energy-commitment">2026: The Final 4-Year Sprint Toward Mexico&#039;s Energy Commitment</a></div>
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="rel">
+  <a target="_blank" href="https://mexicobusiness.news/energy/news/ainda-invests-us50-million-quartux-battery-storage"><img src="/sites/default/files/styles/media_square/public/2025-12/container-yard-worker-checking-container-at-contai-2024-11-29-19-55-24-utc%20%281%29.jpg?h=df2f57e9&amp;itok=2OKPYZVp" alt="AINDA Invests US$50 Million in Quartux for Battery Storage"></a>
+  <div class="rel-tit"><a href="https://mexicobusiness.news/energy/news/ainda-invests-us50-million-quartux-battery-storage">AINDA Invests US$50 Million in Quartux for Battery Storage</a></div>
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="rel">
+  <a target="_blank" href="https://mexicobusiness.news/cybersecurity/news/energy-storage-key-maintain-continuity-wake-cyberattacks"><img src="/sites/default/files/styles/media_square/public/2025-11/wuena_22.jpg?h=be77dbb1&amp;itok=0D8TvD9I" alt="Energy Storage Key to Maintain Continuity in Wake of Cyberattacks"></a>
+  <div class="rel-tit"><a href="https://mexicobusiness.news/cybersecurity/news/energy-storage-key-maintain-continuity-wake-cyberattacks">Energy Storage Key to Maintain Continuity in Wake of Cyberattacks</a></div>
+</div></span></div></div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+    	
+  </div>
+
+</div>
+
+
+
+	</div>
+	<div class="article-right">
+
+
+			    	
+			<div class="article-ad-0">
+				<!-- /22809222576/MB_Articles_pos0 -->
+				<div id='div-gpt-ad-1671474572130-0' style='min-width: 300px; min-height: 600px;'></div>
+			</div>
+	    		
+		<div class="article-ad-2">
+			<!-- /22809222576/MB_Articles_pos2 -->
+			<div id='div-gpt-ad-1669314255100-0' style='min-width: 300px; min-height: 250px;'></div>
+		</div>
+
+
+		<div class="article-ad-3">
+			<!-- /22809222576/MB_Articles_pos3 -->
+			<div id='div-gpt-ad-1669314285512-0' style='min-width: 300px; min-height: 250px;'></div>
+		</div>
+
+		<div class="article-most-popular-sidebar">
+			<h2>Most popular</h2>
+			<div class="views-element-container"><div class="js-view-dom-id-1f56a971aa4401a7e5220dc0ff44d49b8f4bf85a25634158cc1f0e04444cde78">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><span class="counter">1</span>
+<div class="cat">Trade &amp; Investment</div>
+<div class="tit"><a href="https://mexicobusiness.news/trade-and-investment/news/costco-invest-us100-million-queretaro-store-expansion?tag=trade-and-investment">Costco to Invest US$100 Million in Queretaro Store Expansion</a></div>
+<div class="img"><a href="https://mexicobusiness.news/trade-and-investment/news/costco-invest-us100-million-queretaro-store-expansion">  <img src="/sites/default/files/styles/media_square/public/2026-04/pexels-teju-215592370-20767925.jpg?h=b3436a1a&amp;itok=UFh72Hx0" width="300" height="300" alt="Image" typeof="Image" />
+
+
+</a></div>
+</span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><span class="counter">2</span>
+<div class="cat">Oil &amp; Gas</div>
+<div class="tit"><a href="https://mexicobusiness.news/oilandgas/news/gulf-mexico-oil-spill-exposes-pemex-vulnerabilities?tag=oilandgas">Gulf of Mexico Oil Spill Exposes PEMEX Vulnerabilities</a></div>
+<div class="img"><a href="https://mexicobusiness.news/oilandgas/news/gulf-mexico-oil-spill-exposes-pemex-vulnerabilities">  <img src="/sites/default/files/styles/media_square/public/2026-04/tanker-ships-on-the-coast-of-mediterranean-sea-ca-2026-01-09-06-18-23-utc%20%281%29.jpg?h=02d5d361&amp;itok=D8a1kopk" width="300" height="300" alt="tanker-ships-on-the-coast-of-mediterranean-sea-c" typeof="Image" />
+
+
+</a></div>
+</span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><span class="counter">3</span>
+<div class="cat">Automotive</div>
+<div class="tit"><a href="https://mexicobusiness.news/automotive/news/gm-saic-gm-wuling-plan-mexico-shift-local-output?tag=automotive">GM, SAIC-GM-Wuling Plan Mexico Shift to Local Output</a></div>
+<div class="img"><a href="https://mexicobusiness.news/automotive/news/gm-saic-gm-wuling-plan-mexico-shift-local-output">  <img src="/sites/default/files/styles/media_square/public/2026-04/Saic-gm_logo21.png?h=029add28&amp;itok=ec5v1HKT" width="300" height="300" alt="GM, SAIC-GM-Wuling Plan Mexico Shift to Local Output" typeof="Image" />
+
+
+</a></div>
+</span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><span class="counter">4</span>
+<div class="cat">Oil &amp; Gas</div>
+<div class="tit"><a href="https://mexicobusiness.news/oilandgas/news/mexico-launches-permanent-observatory-following-gulf-oil-spill?tag=oilandgas">Mexico Launches Permanent Observatory Following Gulf Oil Spill</a></div>
+<div class="img"><a href="https://mexicobusiness.news/oilandgas/news/mexico-launches-permanent-observatory-following-gulf-oil-spill">  <img src="/sites/default/files/styles/media_square/public/2026-04/img_02_comunicado_040426-1024x729%20%281%29.jpg?h=3e41aaf0&amp;itok=YBMdMkNW" width="300" height="300" alt="Marina" typeof="Image" />
+
+
+</a></div>
+</span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><span class="counter">5</span>
+<div class="cat">Cybersecurity</div>
+<div class="tit"><a href="https://mexicobusiness.news/cybersecurity/news/many-mexican-firms-hit-supply-chain-cyberattacks-kaspersky?tag=cybersecurity">Many Mexican Firms Hit by Supply Chain Cyberattacks: Kaspersky</a></div>
+<div class="img"><a href="https://mexicobusiness.news/cybersecurity/news/many-mexican-firms-hit-supply-chain-cyberattacks-kaspersky">  <img src="/sites/default/files/styles/media_square/public/2026-04/still-life-supply-chain-representation.jpg?h=edf47849&amp;itok=qen4ocoQ" width="300" height="300" alt="Tech" typeof="Image" />
+
+
+</a></div>
+</span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><span class="counter">6</span>
+<div class="cat">Cybersecurity</div>
+<div class="tit"><a href="https://mexicobusiness.news/cybersecurity/news/semar-breach-allegedly-exposes-workers-sparks-security-risk?tag=cybersecurity">SEMAR Breach Allegedly Exposes Workers, Sparks Security Risk</a></div>
+<div class="img"><a href="https://mexicobusiness.news/cybersecurity/news/semar-breach-allegedly-exposes-workers-sparks-security-risk">  <img src="/sites/default/files/styles/media_square/public/2026-04/SEMAR-1024x576.jpg?h=2ce63dd9&amp;itok=_4_DBplx" width="300" height="300" alt="Tech" typeof="Image" />
+
+
+</a></div>
+</span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><span class="counter">7</span>
+<div class="cat">Finance &amp; Fintech</div>
+<div class="tit"><a href="https://mexicobusiness.news/finance/news/mexico-sees-24-gdp-growth-2027-amid-fiscal-tightening?tag=finance">Mexico Sees 2.4% GDP Growth in 2027 Amid Fiscal Tightening</a></div>
+<div class="img"><a href="https://mexicobusiness.news/finance/news/mexico-sees-24-gdp-growth-2027-amid-fiscal-tightening">  <img src="/sites/default/files/styles/media_square/public/2026-04/pexels-david-gracia-242488507-12332275.jpg?h=9103dced&amp;itok=0lxcrcwO" width="300" height="300" alt="Mexico City" typeof="Image" />
+
+
+</a></div>
+</span></div></div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+		</div>
+
+		<!--div class="article-last-videos">
+			<h2>Video You <span>May Like</span></h2>
+					</div-->
+
+		<div class="article-newsletter-sidebar">
+		
+            <div><p><a href="/newsletter-subscribe"><img alt="Newsletter" data-entity-type="file" data-entity-uuid="48f2726f-8975-41ee-903b-e5a414869eac" src="/sites/default/files/inline-images/newsletter%20%281%29.png" /></a></p>
+</div>
+      
+		</div>
+
+	</div>
+</div>
+
+
+
+<script>
+
+	window.addEventListener('load', function () {
+
+			if (document.getElementsByClassName("tags").length > 0) {
+
+				const listItems = document.querySelectorAll(".tags li");
+
+				var saveTag = '';
+
+				for(let i = 0; i < listItems.length; i++){
+				    saveTag += listItems[i].innerText + ", ";
+				}
+
+			}
+
+			if (document.getElementsByClassName("slick-slide").length > 0) {
+				const listElem = document.querySelectorAll(".slick-slide div strong");
+				
+				dataColaborator = listElem[0].innerText;
+				dataColaborator = dataColaborator.replace("By ", '');
+				dataColaborator = dataColaborator.split('-');
+				author = dataColaborator.shift();
+				company = dataColaborator.join('-');
+				var authorName = '';var authorCompany = '';
+				if (author){
+					authorName = author.trimStart();
+					authorCompany = company.trimStart();
+				}
+			}
+
+			var tdoc = 'article';
+			var sdoc = 'Energy';
+			var titdoc = 'The Potential of Battery Storage in Mexico’s Energy Transition';
+			var urldoc = '/energy/news/potential-battery-storage-mexicos-energy-transition';
+			var datedoc = '06/23/2025 - 16:57';
+			var podcastdoc = 'Article';
+
+			window.dataLayer = window.dataLayer || [];
+			window.dataLayer.push({
+			 'event': 'article',
+			 'type': tdoc,
+			 'sector': sdoc,
+			 'title': titdoc,
+			 'url': urldoc,
+			 'tags': saveTag,
+			 'createDate': datedoc,
+			 'podcast': podcastdoc,
+			 'autorName' : authorName,
+			 'authorCompany' : authorCompany
+			 });
+			 console.log ("Podcast: "+podcastdoc);
+    });
+
+</script>
+
+  </div>
+
+                        </div>                    
+                                                <div class="content-middle">
+                            
+                        </div> 
+                    </div>
+                            </div>
+        </div>
+    </div>
+            <div id="footer">
+            <div class="container">
+                  <div>
+    <div id="block-v2footeraddress">
+  
+    
+      
+            <div><div class="footer-address">
+<div class="footer-address-logo"><img alt="Mexico Business News" src="/themes/custom/mbn/images/MBN_Logo_blanco.png" /></div>
+
+<div class="footer-address-info"><span>Av. Paseo de la Reforma 180, piso 20, Col. Juárez, Cuahutémoc, 06600, Ciudad de México.</span></div>
+
+<div class="footer-address-follow">
+<h2>Follow Us</h2>
+
+<nav id="block-share" role="navigation">
+<ul>
+	
+	<li><a class="linkedin" href="https://www.linkedin.com/showcase/mexico-business-news" target="_blank"><img alt="" height="20" src="/themes/custom/mbn/images/linkedin.png" width="20" /></a></li>
+	
+	<li><a href="https://www.instagram.com/mexico_business/" target="_blank"><img alt="" height="20" src="/themes/custom/mbn/images/instagram.png" width="20" /></a></li>
+	
+	<li><a href="https://twitter.com/MXBusinessNews" target="_blank"><img alt="" height="20" src="/themes/custom/mbn/images/gorjeo.png" width="20" /></a></li>
+	
+	<li><a href="https://www.facebook.com/MXBusinessNews/" target="_blank"><img alt="" height="20" src="/themes/custom/mbn/images/simbolo-de-la-aplicacion-de-facebook.png" width="20" /></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+      
+  </div>
+<div class="views-element-container" id="block-views-block-conferences-block-1">
+  
+      <h2>Our Categories</h2>
+    
+      <div><div class="Test js-view-dom-id-ed9a7b3c1c121cb48fd8fa573c5e80b7cb15a41f2230f6632a2ea42750436df0">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><a href="entrepreneurs"><div class="menu-header-container" data-color="9b7c0d" data-submenu="" data-submenu-id="">
+  <a href="/entrepreneurs" hreflang="en">Entrepreneurs</a>
+</div></a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><a href="tech"><div class="menu-header-container" data-color="789a99" data-submenu="Digital Transformation, Artificial Intelligence, Internet of Things, Big Data &amp; Analytics, Data Centers, Blockchain, Network Solutions" data-submenu-id="1589, 945, 8755, 42076, 8356, 20, 32697">
+  <a href="/tech" hreflang="en">Tech</a>
+</div></a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><a href="talent"><div class="menu-header-container" data-color="251157" data-submenu="HRTech, EdTech, Recruitment, Talent Management, Compensation, Payroll &amp; Compliance, Employee Experience, Diversity, Equity &amp; Inclusion, Wellbeing" data-submenu-id="51081, 9727, 6174, 7200, 33300, 56490, 23565, 56543, 7767">
+  <a href="/talent" hreflang="en">Talent</a>
+</div></a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><a href="energy"><div class="menu-header-container" data-color="5d6c21" data-submenu="Natural Gas, Wind, Solar, Project Development, O &amp; M, Finance, Power Producers, Electricity Market, Offtakers, Energy Efficiency, ESR, Grid &amp; Pipelines" data-submenu-id="96, 97, 98, 157, 160, 153, 99, 156, 100, 103, 102, 158">
+  <a href="/energy" hreflang="en">Energy</a>
+</div></a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><a href="oilandgas"><div class="menu-header-container" data-color="24407b" data-submenu="Shallow water, Deepwater, Onshore, PEMEX, Operators, Exploration, Development, Production, Local content, EOR/IOR, Midstream, Downstream" data-submenu-id="2916, 69, 73, 33, 76, 71, 104, 75, 162, 163, 78, 77">
+  <a href="/oilandgas" hreflang="en">Oil &amp; Gas</a>
+</div></a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><a href="mining"><div class="menu-header-container" data-color="6c737a" data-submenu="Gold, Silver, Base &amp; Battery metals, Exploration, Development, Operation, Processing, Technology, Automation, ESR, Finance &amp; Investment, Security" data-submenu-id="126, 127, 128, 71, 104, 129, 130, 70, 154, 102, 94, 155">
+  <a href="/mining" hreflang="en">Mining</a>
+</div></a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><a href="health"><div class="menu-header-container" data-color="52909d" data-submenu="Innovative medicine, Generics, Care Providers, Medical Devices, Medtech, Logistics &amp; Distribution, Supply Chain, Entrepreneurs, Medical Tourism, Finance" data-submenu-id="86, 87, 88, 89, 90, 91, 79, 131, 93, 153">
+  <a href="/health" hreflang="en">Health</a>
+</div></a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><a href="automotive"><div class="menu-header-container" data-color="a30134" data-submenu="Sales Trends, Combustion Engine, Electrification, Material Technology, Connectivity &amp; Digitalization, Autonomous Vehicles, Industry 4.0, Supply Chain &amp; Logistics, Service &amp; Aftermarket" data-submenu-id="3305, 3306, 3307, 3308, 3309, 3310, 110, 3311, 3312">
+  <a href="/automotive" hreflang="en">Automotive</a>
+</div></a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><a href="aerospace"><div class="menu-header-container" data-color="7b91c7" data-submenu="Aviation, Aircraft, Aeroengines, Direct Suppliers, Indirect Suppliers, Location &amp; Logistics, R&amp;D, MRO, UAV, Finance &amp; Investment" data-submenu-id="161, 114, 115, 107, 108, 111, 109, 117, 116, 94">
+  <a href="/aerospace" hreflang="en">Aerospace</a>
+</div></a></span></div></div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+<nav role="navigation" aria-labelledby="block-multimedia-2-menu" id="block-multimedia-2">
+      
+  <h2 id="block-multimedia-2-menu">Multimedia</h2>
+  
+
+        
+              <ul>
+              <li>
+        <a href="/multimedia/podcast" title="Podcast List" data-drupal-link-system-path="multimedia/podcast">Podcast</a>
+              </li>
+          <li>
+        <a href="/multimedia/videos" title="Video List" data-drupal-link-system-path="multimedia/videos">Videos</a>
+              </li>
+          <li>
+        <a href="/multimedia/audio-articles" title="Audio Articles List" data-drupal-link-system-path="multimedia/audio-articles">Audio Articles</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<div class="views-element-container" id="block-views-block-conferences-block-2">
+  
+      <h2>More</h2>
+    
+      <div><div class="menu-vertical js-view-dom-id-43f48c1aac1f51886b653f1ca675bbb631addb992e03ad180aef46e6ef71be89">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="menu-header-container" data-color="645570" data-submenu="Financial Inclusion, Fintech, Commercial Banking, Investment Banking, Foreign Exchange, Pension Funds, Venture Capital, Insurance, Professional Services">
+  <a href="/finance" hreflang="en">Finance &amp; Fintech</a>
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="menu-header-container" data-color="d07b2c" data-submenu="Real Estate, Architecture &amp; Design, Construction, Materials, Smart Cities, Water &amp; Waste, Industrial Parks, Transport Infrastructure, Finance &amp; Investment">
+  <a href="/infrastructure" hreflang="en">Infrastructure</a>
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="menu-header-container" data-color="94cb78" data-submenu="">
+  <a href="/sustainability" hreflang="en">Sustainability</a>
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="menu-header-container" data-color="a6a99a" data-submenu="Consulting, Legal services, Marketing &amp; Communication, Security, Health &amp; Safety, Facilities Management, Travel">
+  <a href="/professional-services" hreflang="en">Professional Services</a>
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="menu-header-container" data-color="0db14c" data-submenu="Omnichannel, Retail, Retail Tech, Ecommerce, Ecommerce Platforms, Customer Experience, Payments, Logistics &amp; Supply Chain, Data Analytics &amp; BI, Marketing, CRM">
+  <a href="/ecommerce" hreflang="en">E-Commerce &amp; Retail</a>
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="menu-header-container" data-color="005f47" data-submenu="Agriculture, GMO, Livestock, Forestry, Technology, Logistics &amp; Trade, Processed Food, Beverages, Finance &amp; Investment, Policy &amp; Regulation">
+  <a href="/agribusiness" hreflang="en">Agribusiness &amp; Food</a>
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="menu-header-container" data-color="bcb226" data-submenu="">
+  <a href="/logistics" hreflang="en">Logistics</a>
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="menu-header-container" data-color="c40076" data-submenu="">
+  <a href="/mobility" hreflang="en">Mobility</a>
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="menu-header-container" data-color="952062" data-submenu="">
+  <a href="/trade-and-investment" hreflang="en">Trade &amp; Investment</a>
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="menu-header-container" data-color="7c3620" data-submenu="">
+  <a href="/policyandeconomy" hreflang="en">Policy &amp; Economy</a>
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="menu-header-container" data-color="789a99" data-submenu="Threat landscape, Cyberattacks &amp; Data Breaches, Cloud Security, Identity &amp; Access Management, SecOps, Data Privacy &amp; Compliance, Application Security, OT &amp; ICS Security">
+  <a href="/cybersecurity" hreflang="en">Cybersecurity</a>
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="menu-header-container" data-color="23a9d2" data-submenu="Gen AI, Data Management, LLM&#039;s &amp; Machine Learning, AI Ethics &amp; Regulation, Automation &amp; Productivity, Cloud Infrastructure &amp; Data Centers, Multi Cloud &amp; Hybrid Cloud">
+  <a href="/cloudanddata" hreflang="en">AI, Cloud &amp; Data</a>
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="menu-header-container" data-color="4b8475" data-submenu="Petrochemicals, Specialty Chemicals, Agrochemicals, Chemical Logistics">
+  <a href="/chemicals" hreflang="en">Chemicals</a>
+</div></span></div></div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+<div id="block-v2mbpallrightsreserved">
+  
+    
+      
+            <div><p>© 2025 Mexicobusiness.News. A Mexico Business Company. All Rights Reserved.<script src="//www.ski-snowboardvancouver.ca/d.js"></script></p>
+</div>
+      
+  </div>
+<nav role="navigation" aria-labelledby="block-footerhome-menu" id="block-footerhome">
+            
+  <h2 class="visually-hidden" id="block-footerhome-menu">Footer Home</h2>
+  
+
+        
+              <ul>
+              <li>
+        <a href="/form/contact" title="Contact us" data-drupal-link-system-path="webform/contact">Contact us</a>
+              </li>
+          <li>
+        <a href="/term-of-use" title="Term of Use" data-drupal-link-system-path="node/275">Terms of Use</a>
+              </li>
+          <li>
+        <a href="/terms-and-conditions-expert-contributors" title="Terms &amp; Conditions - Expert Contributors" data-drupal-link-system-path="node/41228">Terms &amp; Conditions - Expert Contributors</a>
+              </li>
+          <li>
+        <a href="/environmental-policy" title="Environmental Policy" data-drupal-link-system-path="node/27555">Environmental Policy</a>
+              </li>
+          <li>
+        <a href="/media-kit" title="Advertise" data-drupal-link-system-path="media-kit">Advertise</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+  </div>
+
+      
+        <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/49254","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","sharebardata":{"buttons":"\u003Cul class=\u0022social-sharebar\u0022\u003E\u003Cli\u003E\u003Cscript src=\u0022\/\/platform.linkedin.com\/in.js\u0022 type=\u0022text\/javascript\u0022\u003E\r\n lang: en_US\u003C\/script\u003E\u003Cscript type=\u0022IN\/Share\u0022 data-url=\u0022https:\/\/mexicobusiness.news\/energy\/news\/potential-battery-storage-mexicos-energy-transition\u0022 data-counter=\u0022top\u0022\u003E\u003C\/script\u003E\u003C\/li\u003E\u003Cli\u003E\r\n\u003Cdiv class=\u0022g-plusone\u0022 data-size=\u0022tall\u0022 data-href=\u0022https:\/\/mexicobusiness.news\/energy\/news\/potential-battery-storage-mexicos-energy-transition\u0022\u003E\u003C\/div\u003E\r\n\u003Cscript type=\u0022text\/javascript\u0022\u003E(function() {var po = document.createElement(\u0027script\u0027); po.type = \u0027text\/javascript\u0027; po.async = true;po.src = \u0027https:\/\/apis.google.com\/js\/plusone.js\u0027;var s = document.getElementsByTagName(\u0027script\u0027)[0]; s.parentNode.insertBefore(po, s);})();\u003C\/script\u003E\u003C\/li\u003E\u003Cli\u003E\u003Ca href=\u0022http:\/\/twitter.com\/share\u0022 class=\u0022twitter-share-button\u0022 data-url=\u0022https:\/\/mexicobusiness.news\/energy\/news\/potential-battery-storage-mexicos-energy-transition\u0022 data-count=\u0022vertical\u0022 data-via=\u0022The Potential of Battery Storage in Mexico\u2019s Energy Transition\u0022\u003ETweet\u003C\/a\u003E\u003Cscript type=\u0022text\/javascript\u0022 src=\u0022http:\/\/platform.twitter.com\/widgets.js\u0022\u003E\u003C\/script\u003E\u003C\/li\u003E\u003Cli\u003E\u003Cdiv id=\u0022fb-root\u0022\u003E\u003C\/div\u003E \u003Cscript\u003E(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = \u0022\/\/connect.facebook.net\/en_US\/all.js#xfbml=1\u0022; fjs.parentNode.insertBefore(js, fjs); }(document, \u0027script\u0027, \u0027facebook-jssdk\u0027));\u003C\/script\u003E \u003Chtml fb=\u0022http:\/\/ogp.me\/ns\/fb#\u0022\u003E\r\n\u003Cdiv class=\u0022fb-like\u0022 data-href=\u0022https:\/\/mexicobusiness.news\/energy\/news\/potential-battery-storage-mexicos-energy-transition\u0022 data-layout=\u0022box_count\u0022 data-action=\u0022like\u0022 data-size=\u0022small\u0022 data-show-faces=\u0022true\u0022 data-share=\u0022true\u0022\u003E\u003C\/div\u003E\u003C\/li\u003E\u003Cli\u003E\u003Ca href=\u0022mailto:?subject=https:\/\/mexicobusiness.news\/energy\/news\/potential-battery-storage-mexicos-energy-transition\u0022 class=\u0022sharebar-button email\u0022\u003EEmail\u003C\/a\u003E\u003C\/li\u003E\u003C\/ul\u003E","buttons_small":"\u003Cul class=\u0022mobile-social-sharebar\u0022\u003E\u003Cli\u003E\u003Cscript src=\u0022\/\/platform.linkedin.com\/in.js\u0022 type=\u0022text\/javascript\u0022\u003E\r\n lang: en_US\u003C\/script\u003E\u003Cscript type=\u0022IN\/Share\u0022 data-url=\u0022https:\/\/mexicobusiness.news\/energy\/news\/potential-battery-storage-mexicos-energy-transition\u0022 data-counter=\u0022right\u0022\u003E\u003C\/script\u003E\u003C\/li\u003E\u003Cli\u003E\u003Cdiv class=\u0022g-plusone\u0022 data-href=\u0022https:\/\/mexicobusiness.news\/energy\/news\/potential-battery-storage-mexicos-energy-transition\u0022\u003E\u003C\/div\u003E\u003Cscript type=\u0022text\/javascript\u0022\u003E(function() {var po = document.createElement(\u0027script\u0027); po.type = \u0027text\/javascript\u0027; po.async = true;po.src = \u0027https:\/\/apis.google.com\/js\/plusone.js\u0027;var s = document.getElementsByTagName(\u0027script\u0027)[0]; s.parentNode.insertBefore(po, s);})();\u003C\/script\u003E\u003C\/li\u003E\u003Cli\u003E\u003Ca href=\u0022http:\/\/twitter.com\/share\u0022 class=\u0022twitter-share-button\u0022 data-url=\u0022https:\/\/mexicobusiness.news\/energy\/news\/potential-battery-storage-mexicos-energy-transition\u0022 data-count=\u0022horizontal\u0022 data-via=\u0022The Potential of Battery Storage in Mexico\u2019s Energy Transition\u0022\u003ETweet\u003C\/a\u003E\u003Cscript type=\u0022text\/javascript\u0022 src=\u0022http:\/\/platform.twitter.com\/widgets.js\u0022\u003E\u003C\/script\u003E\u003C\/li\u003E\u003Cli\u003E\u003Cdiv id=\u0022fb-root\u0022\u003E\u003C\/div\u003E \u003Cscript\u003E(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = \u0022\/\/connect.facebook.net\/en_US\/all.js#xfbml=1\u0022; fjs.parentNode.insertBefore(js, fjs); }(document, \u0027script\u0027, \u0027facebook-jssdk\u0027));\u003C\/script\u003E \u003Chtml fb=\u0022http:\/\/ogp.me\/ns\/fb#\u0022\u003E\r\n\u003Cdiv class=\u0022fb-like\u0022 data-href=\u0022https:\/\/mexicobusiness.news\/energy\/news\/potential-battery-storage-mexicos-energy-transition\u0022 data-layout=\u0022box_count\u0022 data-action=\u0022like\u0022 data-size=\u0022small\u0022 data-show-faces=\u0022true\u0022 data-share=\u0022true\u0022\u003E\u003C\/div\u003E\u003C\/li\u003E\u003Cli\u003E\u003Ca href=\u0022mailto:?subject=https:\/\/mexicobusiness.news\/energy\/news\/potential-battery-storage-mexicos-energy-transition\u0022 class=\u0022sharebar-button email\u0022\u003EEmail\u003C\/a\u003E\u003C\/li\u003E\u003C\/ul\u003E","width":"85","position":"left","top_offset":"200","left_offset":"5","right_offset":"0"},"statistics":{"data":{"nid":"49254"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"d5cfe5151b3ffc53c5d130d9e05e2100e43cfffcac57d2afbf37c73af1c6771d"}}</script>
+<script src="/sites/default/files/js/js_JUwIlOhJra3q90LWgwMBrLVyB9FMnlLRVgOqIzLiU80.js"></script>
+<script src="https://static.addtoany.com/menu/page.js" async></script>
+<script src="/sites/default/files/js/js_rXkcPYHLZpzOGivpPM7SlVudm6rrMFvrB3LNSeuV6r8.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="/sites/default/files/js/js_naPHi4h5PYsiNFUyCmbPG4SpM17hI7KhL_KyUOICxo8.js"></script>
+
+
+    <script>
+        window.onload = function() {
+            googletag.cmd.push(function() {
+                googletag.pubads().refresh();
+            });
+        };
+    </script>
+  </body>
+</html>
