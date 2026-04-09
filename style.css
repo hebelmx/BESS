@@ -542,6 +542,21 @@ body {
 
 @media (max-width: 768px) { .rev-grid { grid-template-columns: 1fr; } }
 
+/* DATA PLATFORM */
+.data-platform { margin-top: 2rem; }
+.data-platform h4 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.data-platform > .group-desc { margin-bottom: 1.5rem; }
+.data-clients { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+.data-client {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.2rem;
+}
+.dc-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+.data-client h5 { font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--warning); }
+.data-client p { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; }
+
+@media (max-width: 768px) { .data-clients { grid-template-columns: 1fr; } }
+
 /* FOOTER */
 footer {
     padding: 3rem 0; border-top: 1px solid var(--border); text-align: center;
